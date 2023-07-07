@@ -27,7 +27,7 @@ To use the application, run the `app.py` file with the streamlit CLI (after havi
 streamlit run app.py
 ```
 ## Demo Link
-https://kar2410.github.io/MercorHackathon.github.io/
+https://rishika631.github.io/MercorHackathon/
 
 ## Video Link
 https://drive.google.com/file/d/1IgmyAjczCknHr_aEvylIJ9J6G8_cK4HI/view?usp=drive_link
