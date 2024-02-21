@@ -32,7 +32,6 @@
 #         presence_penalty=0.0
 #     )
 #     summary = response.choices[0].text.strip().split("\n")
-#     # send_calendar_notification(summary)
 #     return summary
 
 # # Function to perform chatbot interaction
