@@ -36,7 +36,6 @@
 
 # # Function to perform chatbot interaction
 # def chatbot_interaction(transcript, question):
-#     # Use LangChain API or any other OpenAI model API for chatbot
 #     response = openai.Completion.create(
 #         engine="text-davinci-003",
 #         prompt=f"Transcript: {transcript}\nQuestion: {question}",
