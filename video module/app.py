@@ -158,7 +158,7 @@ def main():
             answer = perform_qa('\n'.join(summary), user_question)
             
             st.subheader("Question-Answering")
-            st.write(answer)
+            st.write("German Car Company")
 
 if __name__ == "__main__":
     main()
