@@ -1,3 +1,105 @@
+# import streamlit as st
+# import openai
+# from youtube_transcript_api import YouTubeTranscriptApi  # Add this import statement
+
+# # Set OpenAI API credentials
+# openai.api_key = "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"
+
+# # Set Streamlit page configuration
+# st.set_page_config(page_title="YouTube Video Summarizer and Chatbot")
+
+# # Function to extract transcript from YouTube video
+# def extract_transcript(youtube_video):
+#     video_id = youtube_video.split("=")[1]
+#     transcript = YouTubeTranscriptApi.get_transcript(video_id)
+    
+#     transcript_text = ""
+#     for segment in transcript:
+#         transcript_text += segment['text'] + " "
+    
+#     return transcript_text
+
+# # Function to summarize transcript using OpenAI's text Meeting Summary model
+# def summarize_transcript(transcript):
+#     prompt = "Extract summary from the following transcript in 100-120 words and key points also:\n\n" + transcript
+#     response = openai.Completion.create(
+#         engine="text-davinci-003",
+#         prompt=prompt,
+#         max_tokens=200,
+#         temperature=0.3,
+#         top_p=1.0,
+#         frequency_penalty=0.0,
+#         presence_penalty=0.0
+#     )
+#     summary = response.choices[0].text.strip().split("\n")
+#     # send_calendar_notification(summary)
+#     return summary
+
+# # Function to perform chatbot interaction
+# def chatbot_interaction(transcript, question):
+#     # Use LangChain API or any other OpenAI model API for chatbot
+#     response = openai.Completion.create(
+#         engine="text-davinci-003",
+#         prompt=f"Transcript: {transcript}\nQuestion: {question}",
+#         max_tokens=75,
+#         temperature=0.7,
+#         top_p=1.0,
+#         frequency_penalty=0.0,
+#         presence_penalty=0.0
+#     )
+#     answer = response.choices[0].text.strip()
+
+#     if answer:
+#         return answer
+#     else:
+#         return "I'm sorry, I don't have an answer for that question."
+
+# # Streamlit app
+# def main():
+#     st.header("YouTube Video Summarizer and Chatbot")
+    
+#     # Get YouTube video URL from user
+#     youtube_video = st.text_input("Enter the YouTube video URL:")
+    
+#     if youtube_video:
+#         # Extract transcript from YouTube video
+#         transcript = extract_transcript(youtube_video)
+        
+#         # Summarize transcript
+#         summary = summarize_transcript(transcript)
+        
+#         st.info("Transcript summary generated successfully!")
+        
+#         # Display transcript summary
+#         st.subheader("Transcript Summary")
+#         st.text('\n'.join(summary))
+        
+#         # Provide question input for chatbot interaction
+#         user_question = st.text_input("Ask a question to the chatbot:")
+        
+#         if user_question:
+#             # Perform chatbot interaction on the transcript
+#             chatbot_answer = chatbot_interaction(transcript, user_question)
+            
+#             st.subheader("Chatbot Response")
+#             st.write(chatbot_answer)
+
+# if __name__ == "__main__":
+#     main()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 import streamlit as st
 from transformers import pipeline
 from youtube_transcript_api import YouTubeTranscriptApi
@@ -72,3 +174,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+
+
